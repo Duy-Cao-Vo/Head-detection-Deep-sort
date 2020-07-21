@@ -112,7 +112,7 @@ class YOLO(object):
             w = int(box[3] - box[1])
             h = int(box[2] - box[0])
             # h = int(round(box[2] - box[0]))   #0: start Y, 1: start X, 2 end Y, 3 end X
-            if h < 20:
+            if h < 24: ### too small head
                 continue
 
             if x < 0:

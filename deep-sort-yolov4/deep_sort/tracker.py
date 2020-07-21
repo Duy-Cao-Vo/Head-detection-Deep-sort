@@ -154,17 +154,16 @@ class Tracker:
     def _initiate_track(self, detection):
         x1, y1, w1, h1 = detection.tlwh
         mean, covariance = self.kf.initiate(detection.to_xyah())
-        if h1 > 20:
-            is_OLD, OLD_ID = self.new_id_track ([x1, y1, w1, h1])
-            if is_OLD:
-                self.tracks.append(Track(
-                    mean, covariance, OLD_ID, self.n_init, self.max_age,
+        is_OLD, OLD_ID = self.new_id_track ([x1, y1, w1, h1])
+        if is_OLD:
+            self.tracks.append(Track(
+                mean, covariance, OLD_ID, self.n_init, self.max_age,
                     detection.feature))
-            else:
-                self.tracks.append(Track(
-                    mean, covariance, self._next_id, self.n_init, self.max_age,
-                    detection.feature))
-                self._next_id += 1
+        else:
+            self.tracks.append(Track(
+                mean, covariance, self._next_id, self.n_init, self.max_age,
+                detection.feature))
+            self._next_id += 1
 
 
     def new_id_track(self, detection):
