@@ -187,7 +187,7 @@ class Track:
                 x2, y2, w2, h2 = cover
                 D = sqrt ((x2 - x1) ** 2 + (y2 - y1) ** 2)
                 # 2 box are too close # box1 is covered by box2
-                if 53 > D > 10 and (w1 <= w2 or h1 <= h2):
+                if 1 < D < 53 and (w1 <= w2 or h1 <= h2):
                     if x1 > x2:
                         W_cover = w2 - abs (x2 - x1)
                     else:

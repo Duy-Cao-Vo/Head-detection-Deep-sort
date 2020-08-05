@@ -24,11 +24,11 @@ warnings.filterwarnings('ignore')
 
 def not_count_staff(frame, startX, startY, endX, endY):
     # Define color of shirt following B G R
-    boundaries = [
-                    ([50, 15, 190], [71, 27, 204])
-                ]
+    boundaries = [([50, 15, 190],
+                   [71, 27, 204])
+    ]
     # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    ROI = frame[int(startY+(endY-startY)/4):int(endY-(endY-startY)/4), startX:endX]
+    ROI = frame[int(startY):int(endY) * 2, startX:endX]
     check_null = np.shape(ROI)
     if any(x == 0 for x in check_null):
         return False
@@ -75,21 +75,21 @@ def main(yolo):
     H = None
     W = None
 
-    R = 80 # min R is 56
+    R = 80  # min R is 56
 
     def solve_quadratic_equation(a, b, c):
         """ax2 + bx + c = 0"""
         delta = b ** 2 - 4 * a * c
         if delta < 0:
-            print ("Phương trình vô nghiệm!")
+            print("Phương trình vô nghiệm!")
         elif delta == 0:
             return -b / (2 * a)
         else:
-            print ("Phương trình có 2 nghiệm phân biệt!")
-            if float ((-b - sqrt (delta)) / (2 * a)) > float ((-b + sqrt (delta)) / (2 * a)):
-                return float ((-b - sqrt (delta)) / (2 * a))
+            print("Phương trình có 2 nghiệm phân biệt!")
+            if float((-b - sqrt(delta)) / (2 * a)) > float((-b + sqrt(delta)) / (2 * a)):
+                return float((-b - sqrt(delta)) / (2 * a))
             else:
-                return float ((-b + sqrt (delta)) / (2 * a))
+                return float((-b + sqrt(delta)) / (2 * a))
 
     def setup_door(H1, W1, H2, W2, R):
         # bước 1 tìm trung điểm của W1, H1 W2, H2
@@ -108,17 +108,17 @@ def main(yolo):
         # bước 2 tìm tâm O của đường tròn
         al = c / u2 + I2
         # tính D: khoảng cách I và O
-        fi = acos(sqrt ((I1 - W1) ** 2 + (I2 - H1) ** 2) / R)
-        D = sqrt ((I1 - W1) ** 2 + (I2 - H1) ** 2) * tan(fi)
+        fi = acos(sqrt((I1 - W1) ** 2 + (I2 - H1) ** 2) / R)
+        D = sqrt((I1 - W1) ** 2 + (I2 - H1) ** 2) * tan(fi)
 
-        O1 = solve_quadratic_equation ((1 + u1 ** 2 / u2 ** 2), 2 * (-I1 + u1 / u2 * al), al ** 2 - D ** 2 + I1 ** 2)
+        O1 = solve_quadratic_equation((1 + u1 ** 2 / u2 ** 2), 2 * (-I1 + u1 / u2 * al), al ** 2 - D ** 2 + I1 ** 2)
         O2 = -u1 / u2 * O1 - c / u2
         # phương trình 2 nghiệm chỉ chọn nghiệm phía trên
 
         # Bước 3 tìm các điểm trên đường tròn
-        door_dict = dict ()
-        for w in range (W1, W2):
-            h = O2 + sqrt (R ** 2 - (w - O1) ** 2)
+        door_dict = dict()
+        for w in range(W1, W2):
+            h = O2 + sqrt(R ** 2 - (w - O1) ** 2)
             door_dict[w] = round(h)
         return door_dict
 
@@ -130,7 +130,7 @@ def main(yolo):
     # create a empty list of centroid to count traffic
     pts = [deque(maxlen=30) for _ in range(9999)]
 
-    file_path = 'D:\\video/hlc_sala_test.mp4'
+    file_path = 'D:\\video/hlc_sala_test_Trim1.mp4'
     video_capture = cv2.VideoCapture(file_path)
 
     fps_imutils = imutils.video.FPS().start()
@@ -143,7 +143,7 @@ def main(yolo):
         oke, frame = video_capture.read()  # frame shape 640*480*3
         if not oke:
             break
-        
+
         frame = cv2.resize(frame, (736, 480))
         image = Image.fromarray(frame[..., ::-1])  # bgr to rgb
 
@@ -187,40 +187,40 @@ def main(yolo):
             tracker.update(detections)
 
         for det in detections:
-            bbox = det.to_tlbr ()
-            if show_detections and len (classes) > 0:
+            bbox = det.to_tlbr()
+            if show_detections and len(classes) > 0:
                 det_cls = det.cls
                 score = "%.2f" % (det.confidence * 100) + "%"
-                cv2.putText (frame, str (det_cls) + " " + score, (int (bbox[0]), int (bbox[3]) - 10), 0,
-                             1e-3 * frame.shape[0], (0, 255, 0), 1)
-                cv2.rectangle (frame, (int (bbox[0]), int (bbox[1])), (int (bbox[2]), int (bbox[3])), (255, 0, 0), 1)
+                cv2.putText(frame, str(det_cls) + " " + score, (int(bbox[0]), int(bbox[3]) - 10), 0,
+                            1e-3 * frame.shape[0], (0, 255, 0), 1)
+                cv2.rectangle(frame, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), (255, 0, 0), 1)
 
         for track in tracker.tracks:
             if not track.is_confirmed() or track.time_since_update > 40:
                 continue
-            bbox = track.to_tlbr ()
+            bbox = track.to_tlbr()
 
-            if not_count_staff (frame, int (bbox[0]), int (bbox[1]), int (bbox[2]), int (bbox[3])):
+            if not_count_staff(frame, int(bbox[0]), int(bbox[1]), int(bbox[2]), int(bbox[3])):
                 # adc = "%.2f" % (track.adc * 100) + "%"  # Average detection confidence
-                cv2.rectangle (frame, (int (bbox[0]), int (bbox[1])), (int (bbox[2]), int (bbox[3])), (0, 255, 255), 1)
-                cv2.putText (frame, "STAFF", (int (bbox[0]), int (bbox[1]) - 10), 0,
-                             1e-3 * frame.shape[0], (0, 0, 255), 1)
+                cv2.rectangle(frame, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), (0, 255, 255), 1)
+                cv2.putText(frame, "STAFF", (int(bbox[0]), int(bbox[1]) - 10), 0,
+                            1e-3 * frame.shape[0], (0, 0, 255), 1)
                 continue
 
             # adc = "%.2f" % (track.adc * 100) + "%"  # Average detection confidence
-            cv2.rectangle (frame, (int (bbox[0]), int (bbox[1])), (int (bbox[2]), int (bbox[3])), (255, 255, 255),
-                            1)
-            cv2.putText (frame, "ID: " + str (track.track_id), (int (bbox[0]), int (bbox[1])), 0,
+            cv2.rectangle(frame, (int(bbox[0]), int(bbox[1])), (int(bbox[2]), int(bbox[3])), (255, 255, 255),
+                          1)
+            cv2.putText(frame, "ID: " + str(track.track_id), (int(bbox[0]), int(bbox[1])), 0,
                         1e-3 * frame.shape[0], (0, 255, 0), 1)
 
             x = [c[0] for c in pts[track.track_id]]
             y = [c[1] for c in pts[track.track_id]]
             under_door = True
 
-            centroid_x = int (((bbox[0]) + (bbox[2])) / 2)
-            centroid_y = int (((bbox[1]) + (bbox[3])) / 2)
+            centroid_x = int(((bbox[0]) + (bbox[2])) / 2)
+            centroid_y = int(((bbox[1]) + (bbox[3])) / 2)
 
-            #checker: Count person through store
+            # checker: Count person through store
             if not track.Counted and centroid_x in range(W1, W2):
                 # if all centroid of user have detect in last 30 frame in door range(W1, W2)
                 # if user is found in store so under_door is fail --> do not check through door
@@ -234,33 +234,33 @@ def main(yolo):
                 3. person must move around Horizontal at least 20 px: np.max (x) - np.min (x) > 20
                 4. person must have at least 1 centroid under the door
                 '''
-                if centroid_y < np.mean (y) and door_dict[centroid_x] > centroid_y and np.max (x) - np.min (x) > 20\
+                if centroid_y < np.mean(y) and door_dict[centroid_x] > centroid_y and np.max(x) - np.min(x) > 20 \
                         and under_door:
                     totalIn += 1
                     track.Counted = True
-                    print (track.track_id, track.Counted)
+                    print(track.track_id, track.Counted)
 
-            cv2.circle (frame, (centroid_x, centroid_y), 4, (0, 255, 0), -1)
+            cv2.circle(frame, (centroid_x, centroid_y), 4, (0, 255, 0), -1)
             pts[track.track_id].append((centroid_x, centroid_y))
 
         info = [
-            ("Time", "{:.4f}".format (videotime)),
+            ("Time", "{:.4f}".format(videotime)),
             ("In", totalIn)
         ]
 
         # loop over the info tuples and draw them on our frame
-        for (i, (k, v)) in enumerate (info):
-            text = "{}: {}".format (k, v)
-            cv2.putText (frame, text, (W - 150, ((i * 20) + 20)),
-                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
+        for (i, (k, v)) in enumerate(info):
+            text = "{}: {}".format(k, v)
+            cv2.putText(frame, text, (W - 150, ((i * 20) + 20)),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 2)
         if writeVideo_flag:
             # save a frame
             out.write(frame)
 
         if show_detections:
-            cv2.imshow ('People counter', frame)
+            cv2.imshow('People counter', frame)
             # Press Q to stop!
-            if cv2.waitKey (1) & 0xFF == ord ('q'):
+            if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
 
         fps_imutils.update()

@@ -58,7 +58,6 @@ class Tracker:
             track.predict(self.kf)
 
         for i, track in enumerate(self.Covered_lists):
-
             track[2] += 1
             if track[2] >= 140:
                 self.Covered_lists.pop(i)
@@ -80,9 +79,10 @@ class Tracker:
         track_covered = [t.to_tlwh() for t in self.tracks]
         # Update track set.
         for track_idx, detection_idx in matches:
+            self.tracks[track_idx].is_Covered (track_covered, 0.75)
             self.tracks[track_idx].update (self.kf, detections[detection_idx])
         for track_idx in unmatched_tracks:
-            self.tracks[track_idx].is_Covered(track_covered, 0.75)
+            self.tracks[track_idx].is_Covered (track_covered, 0.75)
             self.tracks[track_idx].mark_missed()
             if self.tracks[track_idx].state == 3 and self.tracks[track_idx].time_since_update == 1:
                 print("DELETE ID", self._next_id)
@@ -174,7 +174,7 @@ class Tracker:
                 D = sqrt ((x2 - x1) ** 2 + (y2 - y1) ** 2)
                 print(" ------ DEGUB D", cover[0], D)
                 print(x1, y1, w1, h1)
-                if 1 < D <= 60:
+                if 1 < D <= 60 and 50 < x1 < 736-150 and y1 < 480 - 130:
                     print(" ------ DEBUG OLD ID")
                     self.Covered_lists.pop(i)
                     return True, cover[0]
