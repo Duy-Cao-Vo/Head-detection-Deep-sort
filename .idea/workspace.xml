@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="453e4d46-d902-4ff7-8766-c7c2196896e3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/deep-sort-yolov4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Head Detection.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1eBPlQ8OxMEclSmPSrSsGLK7boF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="D:/Python/jupyter_notebook/Facebook/messenger-chatbot" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Python.demo_with_skip_frame">
+    <configuration name="convert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Head Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-sort-yolov4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-sort-yolov4/convert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo_with_skip_frame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Head Detection" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/deep-sort-yolov4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deep-sort-yolov4/demo_with_skip_frame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.demo_with_skip_frame" />
+        <item itemvalue="Python.convert" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="453e4d46-d902-4ff7-8766-c7c2196896e3" name="Default Changelist" comment="" />
+      <created>1593792162910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593792162910</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="431" y="-726" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595230424863">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state x="431" y="-726" key="#com.intellij.fileTypes.FileTypeChooser/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595230424863" />
+    <state x="752" y="343" key="#com.intellij.fileTypes.FileTypeChooser/109.0.1811.1080@109.0.1811.1080" timestamp="1593933388034" />
+    <state x="332" y="-797" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1595587326395">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state x="332" y="-797" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595587326395" />
+    <state x="574" y="260" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/109.0.1571.1050@109.0.1571.1050" timestamp="1594626714725" />
+    <state x="777" y="280" key="FileChooserDialogImpl" timestamp="1596634370312">
+      <screen x="109" y="0" width="1811" height="1080" />
+    </state>
+    <state x="-394" y="-786" key="FileChooserDialogImpl/109.0.1257.768/-1014.-1050.1680.1020@-1014.-1050.1680.1020" timestamp="1596616233370" />
+    <state x="455" y="-786" key="FileChooserDialogImpl/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1594959593990" />
+    <state x="389" y="-786" key="FileChooserDialogImpl/109.0.1257.768/-231.-1050.1680.1020@-231.-1050.1680.1020" timestamp="1596165779719" />
+    <state x="-321" y="-786" key="FileChooserDialogImpl/109.0.1257.768/-941.-1050.1680.1020@-941.-1050.1680.1020" timestamp="1596437316352" />
+    <state x="777" y="280" key="FileChooserDialogImpl/109.0.1811.1080@109.0.1811.1080" timestamp="1596634370312" />
+    <state width="1659" height="13" key="GridCell.Tab.0.bottom" timestamp="1596522950631">
+      <screen x="-174" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="2" key="GridCell.Tab.0.bottom/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595836016941" />
+    <state width="1659" height="13" key="GridCell.Tab.0.bottom/109.0.1257.768/-174.-1050.1680.1020@-174.-1050.1680.1020" timestamp="1596522950631" />
+    <state width="1814" height="364" key="GridCell.Tab.0.bottom/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1213" height="391" key="GridCell.Tab.0.bottom/109.0.1257.768@109.0.1257.768" timestamp="1594288874563" />
+    <state width="1527" height="289" key="GridCell.Tab.0.bottom/109.0.1571.1050@109.0.1571.1050" timestamp="1594626723710" />
+    <state width="1767" height="326" key="GridCell.Tab.0.bottom/109.0.1811.1080@109.0.1811.1080" timestamp="1595260594845" />
+    <state width="1659" height="13" key="GridCell.Tab.0.center" timestamp="1596522950631">
+      <screen x="-174" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="2" key="GridCell.Tab.0.center/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595836016941" />
+    <state width="1659" height="13" key="GridCell.Tab.0.center/109.0.1257.768/-174.-1050.1680.1020@-174.-1050.1680.1020" timestamp="1596522950631" />
+    <state width="1814" height="364" key="GridCell.Tab.0.center/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1213" height="391" key="GridCell.Tab.0.center/109.0.1257.768@109.0.1257.768" timestamp="1594288874563" />
+    <state width="1527" height="289" key="GridCell.Tab.0.center/109.0.1571.1050@109.0.1571.1050" timestamp="1594626723710" />
+    <state width="1767" height="326" key="GridCell.Tab.0.center/109.0.1811.1080@109.0.1811.1080" timestamp="1595260594844" />
+    <state width="1659" height="13" key="GridCell.Tab.0.left" timestamp="1596522950631">
+      <screen x="-174" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="2" key="GridCell.Tab.0.left/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595836016941" />
+    <state width="1659" height="13" key="GridCell.Tab.0.left/109.0.1257.768/-174.-1050.1680.1020@-174.-1050.1680.1020" timestamp="1596522950631" />
+    <state width="1814" height="364" key="GridCell.Tab.0.left/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1213" height="391" key="GridCell.Tab.0.left/109.0.1257.768@109.0.1257.768" timestamp="1594288874563" />
+    <state width="1527" height="289" key="GridCell.Tab.0.left/109.0.1571.1050@109.0.1571.1050" timestamp="1594626723710" />
+    <state width="1767" height="326" key="GridCell.Tab.0.left/109.0.1811.1080@109.0.1811.1080" timestamp="1595260594844" />
+    <state width="1659" height="13" key="GridCell.Tab.0.right" timestamp="1596522950631">
+      <screen x="-174" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="2" key="GridCell.Tab.0.right/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595836016941" />
+    <state width="1659" height="13" key="GridCell.Tab.0.right/109.0.1257.768/-174.-1050.1680.1020@-174.-1050.1680.1020" timestamp="1596522950631" />
+    <state width="1814" height="364" key="GridCell.Tab.0.right/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1213" height="391" key="GridCell.Tab.0.right/109.0.1257.768@109.0.1257.768" timestamp="1594288874563" />
+    <state width="1527" height="289" key="GridCell.Tab.0.right/109.0.1571.1050@109.0.1571.1050" timestamp="1594626723710" />
+    <state width="1767" height="326" key="GridCell.Tab.0.right/109.0.1811.1080@109.0.1811.1080" timestamp="1595260594844" />
+    <state width="1636" height="340" key="GridCell.Tab.1.bottom" timestamp="1595234674961">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="340" key="GridCell.Tab.1.bottom/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595234674961" />
+    <state width="1814" height="364" key="GridCell.Tab.1.bottom/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770313" />
+    <state width="1527" height="352" key="GridCell.Tab.1.bottom/109.0.1571.1050@109.0.1571.1050" timestamp="1594355723345" />
+    <state width="1636" height="340" key="GridCell.Tab.1.center" timestamp="1595234674961">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="340" key="GridCell.Tab.1.center/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595234674961" />
+    <state width="1814" height="364" key="GridCell.Tab.1.center/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1527" height="352" key="GridCell.Tab.1.center/109.0.1571.1050@109.0.1571.1050" timestamp="1594355723345" />
+    <state width="1636" height="340" key="GridCell.Tab.1.left" timestamp="1595234674961">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="340" key="GridCell.Tab.1.left/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595234674961" />
+    <state width="1814" height="364" key="GridCell.Tab.1.left/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770312" />
+    <state width="1527" height="352" key="GridCell.Tab.1.left/109.0.1571.1050@109.0.1571.1050" timestamp="1594355723345" />
+    <state width="1636" height="340" key="GridCell.Tab.1.right" timestamp="1595234674961">
+      <screen x="-165" y="-1050" width="1680" height="1020" />
+    </state>
+    <state width="1636" height="340" key="GridCell.Tab.1.right/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1595234674961" />
+    <state width="1814" height="364" key="GridCell.Tab.1.right/109.0.1257.768/-71.-1080.1858.1080@-71.-1080.1858.1080" timestamp="1593795770313" />
+    <state width="1527" height="352" key="GridCell.Tab.1.right/109.0.1571.1050@109.0.1571.1050" timestamp="1594355723345" />
+    <state x="-673" y="-895" key="SettingsEditor" timestamp="1596616197064">
+      <screen x="-1014" y="-1050" width="1680" height="1020" />
+    </state>
+    <state x="-673" y="-895" key="SettingsEditor/109.0.1257.768/-1014.-1050.1680.1020@-1014.-1050.1680.1020" timestamp="1596616197064" />
+    <state x="176" y="-895" key="SettingsEditor/109.0.1257.768/-165.-1050.1680.1020@-165.-1050.1680.1020" timestamp="1594347890834" />
+    <state x="167" y="-895" key="SettingsEditor/109.0.1257.768/-174.-1050.1680.1020@-174.-1050.1680.1020" timestamp="1596515242770" />
+    <state x="-600" y="-895" key="SettingsEditor/109.0.1257.768/-941.-1050.1680.1020@-941.-1050.1680.1020" timestamp="1596436198156" />
+    <state x="400" y="89" width="672" height="60" key="search.everywhere.popup" timestamp="1594020010996">
+      <screen x="109" y="0" width="1257" height="768" />
+    </state>
+    <state x="400" y="89" width="672" height="60" key="search.everywhere.popup/109.0.1257.768@109.0.1257.768" timestamp="1594020010996" />
+  </component>
+</project>
